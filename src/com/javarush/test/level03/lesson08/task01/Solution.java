@@ -8,16 +8,16 @@ package com.javarush.test.level03.lesson08.task01;
 Последовательность вводимых данных имеет большое значение.
 */
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String name = reader.readLine();
         String sAge = reader.readLine();
+        String name = reader.readLine();
         int age = Integer.parseInt(sAge);
 
+        System.out.println(name + " захватит мир через " + age + " лет. Му-ха-ха!");
     }
 }
