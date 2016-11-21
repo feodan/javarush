@@ -9,15 +9,10 @@ package com.javarush.test.level04.lesson04.task06;
 такого дня недели не существует
 */
 
-import java.io.*;
 import java.util.Scanner;
 
-import static javafx.application.Platform.exit;
-
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
 //        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 //        String s = reader.readLine();
 //        int i = Integer.parseInt(s);
@@ -34,17 +29,17 @@ public class Solution
     public static void checkDay(int i) {
         if (i == 1) {
             System.out.println("понедельник");
-        } else if (i == 2){
+        } else if (i == 2) {
             System.out.println("вторник");
-        } else if (i == 3){
+        } else if (i == 3) {
             System.out.println("среда");
-        } else if (i == 4){
+        } else if (i == 4) {
             System.out.println("четверг");
-        } else if (i == 5){
+        } else if (i == 5) {
             System.out.println("пятница");
-        } else if (i == 6){
+        } else if (i == 6) {
             System.out.println("суббота");
-        } else if (i == 7){
+        } else if (i == 7) {
             System.out.println("воскресенье");
         } else {
             System.out.println("такого дня недели не существует");
