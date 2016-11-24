@@ -13,8 +13,13 @@ public class Solution {
         int i = 1;
         int y = 1;
         while (i <= 10) {
-            System.out.print(i * y + " ");
-            y++;
+            while (y <= 10) {
+                System.out.print(i * y + " ");
+                y++;
+            }
+            i++;
+            y = 1;
+            System.out.println();
         }
     }
 }
