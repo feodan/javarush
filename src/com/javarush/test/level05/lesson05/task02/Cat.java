@@ -33,4 +33,3 @@ public class Cat {
         System.out.println(cat1.fight(cat2));
     }
 }
-
