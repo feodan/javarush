@@ -16,11 +16,15 @@ public class MyFile {
     }
 
     public static void main(String[] args) {
-        MyFile my = new MyFile();
-        my.initialize("asdasd");
-        System.out.println(my.filename);
+        MyFile file = new MyFile();
+        file.initialize("c:\\data\\a.txt");
+        System.out.println(file.filename);
 
-        my.initialize("Folder", "File");
-        System.out.println(my.filename);
+        file.initialize("c:\\data\\", "a.txt");
+        System.out.println(file.filename);
+
+//        String text = file.readText();
+
+
     }
 }
