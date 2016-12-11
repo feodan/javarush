@@ -13,11 +13,20 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = ;
+        int maximum = 0;
+        System.out.print("N: ");
+        int n = Integer.parseInt(reader.readLine());
 
-        //напишите тут ваш код
-
-
+        if (!(n <= 0)) {
+            for (int i = 0; i < n; i++) {
+                int tmp = Integer.parseInt(reader.readLine());
+                if (tmp > maximum) {
+                    maximum = tmp;
+                }
+            }
+        } /*else {
+            System.out.println("N should be bigger than zero");
+        }*/
         System.out.println(maximum);
     }
 }
