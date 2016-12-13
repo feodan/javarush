@@ -1,7 +1,6 @@
 package com.javarush.test.level05.lesson12.bonus03;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* Задача по алгоритмам
 Написать программу, которая:
@@ -12,21 +11,26 @@ import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = 0;
+        Scanner scanner = new Scanner(System.in);
         System.out.print("N: ");
-        int n = Integer.parseInt(reader.readLine());
+        int n = scanner.nextInt();
 
-        if (!(n <= 0)) {
-            for (int i = 0; i < n; i++) {
-                int tmp = Integer.parseInt(reader.readLine());
-                if (tmp > maximum) {
-                    maximum = tmp;
-                }
+        int arr[] = new int[n];
+
+        if (n > 0) {
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = scanner.nextInt();
             }
-        } /*else {
-            System.out.println("N should be bigger than zero");
-        }*/
+        }
+
+        int maximum = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maximum)
+                maximum = arr[i];
+        }
+
+        //напишите тут ваш код
         System.out.println(maximum);
     }
 }
