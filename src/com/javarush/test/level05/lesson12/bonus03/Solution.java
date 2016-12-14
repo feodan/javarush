@@ -14,23 +14,19 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         System.out.print("N: ");
         int n = scanner.nextInt();
+//        if (n <= 0) {
+//            System.exit(-1);
+//        }
+        int maximum = Integer.MIN_VALUE;
 
         int arr[] = new int[n];
 
-        if (n > 0) {
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = scanner.nextInt();
-            }
-        }
-
-        int maximum = arr[0];
-
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scanner.nextInt();
             if (arr[i] > maximum)
                 maximum = arr[i];
         }
 
-        //напишите тут ваш код
         System.out.println(maximum);
     }
 }

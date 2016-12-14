@@ -17,10 +17,10 @@ public class MyFile {
 
     public static void main(String[] args) {
         MyFile file = new MyFile();
-        file.initialize("c:\\data\\a.txt");
+        file.initialize("c:\\data\\A.txt");
         System.out.println(file.filename);
 
-        file.initialize("c:\\data\\", "a.txt");
+        file.initialize("c:\\data\\", "A.txt");
         System.out.println(file.filename);
 
 //        String text = file.readText();

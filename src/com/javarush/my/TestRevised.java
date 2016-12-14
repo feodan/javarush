@@ -6,7 +6,7 @@ public class TestRevised {
     public void menu() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a sentence:\t");
+        System.out.print("Enter A sentence:\t");
         String sentence = scanner.nextLine();
 
         System.out.print("Enter an index:\t");
