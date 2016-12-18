@@ -20,7 +20,6 @@ public class Solution {
                 if (next > first)
                     first = next;
             }
-
             System.out.println(first);
         }
     }
