@@ -12,21 +12,16 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("N: ");
         int n = scanner.nextInt();
-//        if (n <= 0) {
-//            System.exit(-1);
-//        }
-        int maximum = Integer.MIN_VALUE;
+        if (n > 0) {
+            int first = scanner.nextInt();
+            for (int i = 0; i < n - 1; i++) {
+                int next = scanner.nextInt();
+                if (next > first)
+                    first = next;
+            }
 
-        int arr[] = new int[n];
-
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = scanner.nextInt();
-            if (arr[i] > maximum)
-                maximum = arr[i];
+            System.out.println(first);
         }
-
-        System.out.println(maximum);
     }
 }
