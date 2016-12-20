@@ -1,21 +1,23 @@
 package com.javarush.my;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
 
 public class Main1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("N: ");
-        int n = scanner.nextInt();
-        if (n > 0) {
-            int first = scanner.nextInt();
-            for (int i = 0; i < n - 1; i++) {
-                int next = scanner.nextInt();
-                if (next > first)
-                    first = next;
-            }
-
-            System.out.println(first);
+    public static void main(String[] args) throws IOException {
+        Reader r = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(r);
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            String s = reader.readLine();
+            list.add(s);
+        }
+        for (int i = 0; i < list.size(); i++) {
+            int j = list.size()- i -1;
+            System.out.println(list.get(j));
         }
     }
 }
