@@ -15,5 +15,11 @@ public class Solution {
         list.add("мыла");
         list.add("раму");
 
+        list.add(1,"именно");
+        list.add(3,"именно");
+        list.add(5,"именно");
+
+        for (String s : list)
+            System.out.println(s);
     }
 }
