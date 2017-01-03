@@ -1,7 +1,8 @@
 package com.javarush.test.level08.lesson08.task05;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 /* Удалить людей, имеющих одинаковые имена
@@ -26,12 +27,18 @@ public class Solution {
     }
 
     public static void removeTheFirstNameDuplicates(HashMap<String, String> map) {
+        List<String> list = new ArrayList<>();
         for (Map.Entry<String, String> outer : map.entrySet()) {
+            int count = 0;
             for (Map.Entry<String, String> inner : map.entrySet()) {
                 if (outer.getValue().equals(inner.getValue()))
-                    map.remove(inner);
+                    count++;
             }
+            if (count > 1)
+                list.add(outer.getValue());
         }
+        for (String s : list)
+            removeItemFromMapByValue(map, s);
     }
 
     public static void removeItemFromMapByValue(HashMap<String, String> map, String value) {
@@ -44,9 +51,9 @@ public class Solution {
 
 //    public static void main(String[] args) {
 //        HashMap<String, String> map = createMap();
-//        removeItemFromMapByValue(map, "N7");
-//        for (Map.Entry<String, String> pair : map.entrySet()) {
-//            System.out.println(pair.getKey() + pair.getValue());
+//        removeTheFirstNameDuplicates(map);
+//        for (Map.Entry<String, String> element : map.entrySet()) {
+//            System.out.println(element.getKey() + element.getValue());
 //        }
 //    }
 }
