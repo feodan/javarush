@@ -1,10 +1,11 @@
 package com.javarush.test.level08.lesson11.home05;
 
-import com.javarush.test.level06.lesson08.task05.StringHelper;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* Мама Мыла Раму. Теперь с большой буквы
 Написать программу, которая вводит с клавиатуры строку текста.
@@ -22,18 +23,7 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
-        String s1 = s.substring(0, 1).toUpperCase() + s.substring(1);
-
-//        System.out.println(capitalizeString(s));
-//        System.out.println(s.split("\\s+"));
-
-        char[] arr = s1.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if (i == 0)
-                arr[i] = String.valueOf(arr[i]).toUpperCase();
-        }
-        System.out.println(String.valueOf(arr));
-        System.out.println(s1);
+        System.out.println(capitalizeString(s));
     }
 
     public static String capitalizeString(String string) {
