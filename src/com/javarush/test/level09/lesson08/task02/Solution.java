@@ -17,7 +17,7 @@ public class Solution {
             method1();
         }
         catch (Exception1 exception1) {
-            exception1.printStackTrace();
+            System.out.println(exception1);
         }
 
     }

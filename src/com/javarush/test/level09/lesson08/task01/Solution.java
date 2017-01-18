@@ -17,10 +17,10 @@ public class Solution {
             method1();
         }
         catch (NullPointerException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
         catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 

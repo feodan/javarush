@@ -22,8 +22,13 @@ throw e;
 public class Solution {
     public static StatelessBean BEAN = new StatelessBean();
 
-    public static void main(String[] args) throws FileSystemException {
-        processExceptions();
+    public static void main(String[] args) {
+        try {
+            processExceptions();
+        }
+        catch (FileSystemException e) {
+            BEAN.log(e);
+        }
     }
 
     public static void processExceptions() throws FileSystemException {
@@ -32,11 +37,14 @@ public class Solution {
         }
         catch (FileSystemException e) {
             BEAN.log(e);
+            throw e;
+        }
+        catch (CharConversionException e) {
+            BEAN.log(e);
         }
         catch (IOException e) {
             BEAN.log(e);
         }
-
     }
 
     public static class StatelessBean {

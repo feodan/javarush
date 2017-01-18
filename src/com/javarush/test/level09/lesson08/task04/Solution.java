@@ -21,17 +21,11 @@ public class Solution {
             obj.method2();
             obj.method3();
         }
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        }
-        catch (RemoteException e) {
-            e.printStackTrace();
-        }
         catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
+        }
+        catch (NoSuchFieldException e) {
+            System.out.println(e);
         }
     }
 
