@@ -47,7 +47,7 @@ public class Solution {
             for (int j = 0; j < list.get(i).length(); j++) {
                 for (Map.Entry<Character, Integer> pair : mapAbc.entrySet()) {
                     if (pair.getKey().equals(list.get(i).charAt(j))) {
-                        pair.setValue(+1);
+                        pair.setValue(pair.getValue() + 1);
                     }
                 }
             }
