@@ -10,6 +10,6 @@ public class Solution {
     }
 
     public static class Human {
-        //напишите тут ваши переменные и конструкторы
+
     }
 }
