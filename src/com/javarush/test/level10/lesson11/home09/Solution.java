@@ -19,9 +19,15 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> words = new ArrayList<String>();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 20; i++) {
             words.add(reader.readLine());
         }
+//        ArrayList<String> words = new ArrayList<String>();
+//        words.add("aaa");
+//        words.add("bbb");
+//        words.add("aaa");
+//        words.add("bbb");
+//        words.add("ddd");
 
         Map<String, Integer> map = countWords(words);
 
@@ -33,17 +39,14 @@ public class Solution {
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
 
-        result.put(list.get(0), 0);
-        for (int i = 1; i < list.size(); i++) {
-            for (Map.Entry<String, Integer> pair : result.entrySet()) {
-                if (pair.getKey().equals(list.get(i))) {
-                    pair.setValue(pair.getValue() + 1);
-                } else {
-                    result.put(list.get(i), 0);
-                }
+        for (int i = 0; i < list.size(); i++) {
+            if (result.containsKey(list.get(i))) {
+                int temp = result.get(list.get(i));
+                result.put(list.get(i), ++temp);
+            } else {
+                result.put(list.get(i), 1);
             }
         }
-
         return result;
     }
 
