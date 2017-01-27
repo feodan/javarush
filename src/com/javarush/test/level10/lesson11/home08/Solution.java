@@ -11,23 +11,24 @@ import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        ArrayList<String>[] arrayOfStringList = createList();
-        printList(arrayOfStringList);
+//        ArrayList<String>[] arrayOfStringList = createList();
+//        printList(arrayOfStringList);
     }
 
-    public static ArrayList<String>[] createList() throws IOException {
-        ArrayList<String>[] listS = new ArrayList<String>[];
-        ArrayList<String> list = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while (true) {
-            String s = reader.readLine();
-            if (s.isEmpty()) break;
-            list.add(s);
-        }
-
-        String[] arr = list.toArray(new String[list.size()]);
-        return listS;
-    }
+//    public static ArrayList<String>[] createList() throws IOException {
+////        ArrayList<String>[] listS = new ArrayList<String>[0];
+//        ArrayList<String> list = new ArrayList<>();
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        while (true) {
+//            String s = reader.readLine();
+//            if (s.isEmpty()) break;
+//            list.add(s);
+//        }
+//
+//        String[] arr = list.toArray(new String[list.size()]);
+////        return ;
+//        return arr[arr];
+//    }
 
     public static void printList(ArrayList<String>[] arrayOfStringList) {
         for (ArrayList<String> list : arrayOfStringList) {

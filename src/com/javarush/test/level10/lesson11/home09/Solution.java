@@ -19,7 +19,7 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> words = new ArrayList<String>();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 7; i++) {
             words.add(reader.readLine());
         }
 
@@ -33,8 +33,16 @@ public class Solution {
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
 
-        //напишите тут ваш код
-
+        result.put(list.get(0), 0);
+        for (int i = 1; i < list.size(); i++) {
+            for (Map.Entry<String, Integer> pair : result.entrySet()) {
+                if (pair.getKey().equals(list.get(i))) {
+                    pair.setValue(pair.getValue() + 1);
+                } else {
+                    result.put(list.get(i), 0);
+                }
+            }
+        }
 
         return result;
     }
