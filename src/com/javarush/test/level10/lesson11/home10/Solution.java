@@ -27,7 +27,11 @@ public class Solution {
     }
 
     public static int safeGetElement(ArrayList<Integer> list, int index, int defaultValue) {
-        //напишите тут ваш код
+        try {
+            return list.get(index);
+        }
+        catch (Exception e) {
+            return defaultValue;
+        }
     }
-
 }
